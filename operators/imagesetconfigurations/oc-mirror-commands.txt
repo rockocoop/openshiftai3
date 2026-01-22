@@ -1,0 +1,5 @@
+#DOWNLOAD
+oc-mirror --config <imagesetconfig> file:///<download location for mirror .tar files>
+
+#IMPORT
+oc-mirror --from <first mirror_00001.tar file> docker://<registry URL/repository>

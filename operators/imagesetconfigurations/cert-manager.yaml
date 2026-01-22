@@ -1,0 +1,13 @@
+apiVersion: mirror.openshift.io/v1alpha2
+kind: ImageSetConfiguration
+storageConfig:
+  local:
+    path: openshift-cert-manager-operator
+mirror:
+  operators:
+    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.20
+      packages:
+        - name: openshift-cert-manager-operator
+          channels:
+            - name: stable-v1
+

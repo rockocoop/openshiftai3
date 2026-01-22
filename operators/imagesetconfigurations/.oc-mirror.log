@@ -1,0 +1,10 @@
+Creating directory: /tmp/kueue/oc-mirror-workspace/src/publish
+Creating directory: /tmp/kueue/oc-mirror-workspace/src/v2
+Creating directory: /tmp/kueue/oc-mirror-workspace/src/charts
+Creating directory: /tmp/kueue/oc-mirror-workspace/src/release-signatures
+No metadata detected, creating new workspace
+wrote mirroring manifests to /tmp/kueue/oc-mirror-workspace/operators.1769068771/manifests-redhat-operator-index
+
+To upload local images to a registry, run:
+
+	oc adm catalog mirror file://redhat/redhat-operator-index:v4.20 REGISTRY/REPOSITORY
