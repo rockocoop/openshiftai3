@@ -81,6 +81,10 @@ spec:
         effect: "NoSchedule"
     initContainers:
       - name: storage-initializer
+        args:
+        - s3://models/Qwen3-0.6B
+        - /mnt/models
+        image: registry.redhat.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:8c99d5e93a469b2aa7f7ad4810f17114bd032392135607945669d92182e37fab 
         env:
         - name: AWS_ACCESS_KEY_ID
           value: <add your key>
@@ -92,6 +96,10 @@ spec:
           value: default
         - name: AWS_ENDPOINT_URL
           value: <add your s3 url.  It is possible to enter http instead of https if needed>
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - mountPath: /mnt/models
+          name: kserve-provision-locations
     containers:
       - name: main
         env:
