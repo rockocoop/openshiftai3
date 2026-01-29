@@ -10,3 +10,5 @@ mirror:
         - name: gpu-operator-certified
           channels:
             - name: v25.10
+  additionalImages:
+    - name: nvcr.io/nvidia/driver@sha256:b93f1aab82ceb081919f58e13a66142c5857a0a5e68e13661a3e74696434c1d1
