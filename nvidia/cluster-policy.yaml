@@ -11,7 +11,7 @@ spec:
     enabled: false
     defaultWorkload: container
   driver:
-    enabled: true
+    enabled: false
     useNvidiaDriverCRD: false
     upgradePolicy:
       autoUpgrade: true
