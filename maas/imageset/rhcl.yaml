@@ -10,4 +10,5 @@ mirror:
         - name: rhcl-operator
           channels:
             - name: stable
-
+  additionalImages:
+    - name: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:cdc9274c9efebf51bc016e60f3ae172566b59934b769ef3d591506b018af42b8
