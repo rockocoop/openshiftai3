@@ -13,7 +13,21 @@ metadata:
 spec:
   gatewayClassName: openshift-default
   listeners:
+   - name: https
+     hostname: llm-d.${CLUSTER_DOMAIN}
+     port: 443
+     protocol: HTTPS
+     allowedRoutes:
+       namespaces:
+         from: All
+     tls:
+       certificateRefs:
+       - group: ''
+         kind: Secret
+         name: ${CERT_NAME}
+       mode: Terminate
     - name: http
+      hostname: llm-d.${CLUSTER_DOMAIN}
       port: 80
       protocol: HTTP
       allowedRoutes:
